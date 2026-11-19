@@ -1,46 +1,117 @@
-# Diabetic-retinopathy-detection-system
-A deep learning-based system for diabetic retinopathy detection using CNN and PyTorch.
+# 🩺 Diabetic Retinopathy Detection System (V2)
 
-## Project Overview
+An AI-powered **Mobile-enabled system** for detecting and classifying **Diabetic Retinopathy (DR)** from retinal fundus images using **Convolutional Neural Networks (CNNs)**.  
+The system integrates **real-time image analysis**, **patient monitoring**, **data analytics**, and **secure authentication** for improved clinical workflows and early diagnosis.
 
-An AI-powered mobile application developed to support the early detection and severity classification of diabetic retinopathy through retinal image analysis. The system combines image analysis with patient monitoring and health data analytics to support diabetic eye health management.
+---
 
-## Problem Statement
+## 🚀 Features
 
-Diabetic retinopathy (DR) is a growing national health concern in Zimbabwe, where many patients are diagnosed at advanced stages of the condition, often after experiencing significant vision impairment. Limited access to eye-care specialists further contributes to delays in diagnosis and treatment.
+- AI-based detection of DR severity (No DR, Mild, Moderate, Severe, Blindness)  
+- Real-time image upload and classification  
+- Patient monitoring and health data analytics  
+- Secure authentication using PyJWT and SHA-256 password hashing  
+- Mobile android and iso compatibility  
+- Gamified engagement features for patient awareness  
+- Built with **React (Frontend Native)** and **Flask + PyTorch (Backend)**  
 
-Although some healthcare institutions have access to fundus cameras, healthcare practitioners may lack the tools required to interpret retinal images consistently and efficiently. Existing screening processes can also be labour-intensive and may not provide timely feedback at the point of care.
+---
 
-This project explores an AI-driven solution that integrates fundus imaging and automated retinal image analysis to support healthcare providers with timely insights, personalised recommendations and interactive vision-testing features. Its aim is to encourage patient engagement, promote early detection and help reduce preventable blindness.
+## 🧩 Tech Stack
 
-## Project Objectives
+| Component | Technology |
+|------------|-------------|
+| **Frontend Native** 
+| **Backend** | Flask (Python) |
+| **Model** | PyTorch (CNN) |
+| **Auth & Security** | PyJWT, SHA-256, HTTPS |
+| **Database** | MongoDB
 
-1. To develop an AI-powered mobile application capable of analysing retinal images for the early detection and severity classification of diabetic retinopathy.
-2. To integrate patient monitoring and health data analytics, enabling healthcare providers to track patient risk scores and generate insights from screening trends.
-3. To enhance patient engagement and health awareness through gamification features, including challenges and vision-testing tools.
+---
 
-## Methodology
+## ⚙️ Installation Guide
 
-An Agile development approach was adopted, allowing features to be developed progressively and improved through continuous feedback.
+### 🖥 Frontend Setup
 
-The development process involved:
-- **Data preparation:** Acquiring and preprocessing retinal images.
-- **Model development:** Developing and evaluating a deep learning model for diabetic retinopathy detection and severity classification.
-- **System implementation:** Integrating the model with a mobile application through a backend service.
-- **System evaluation:** Assessing functionality, usability and performance through testing.
+1. Open your terminal and navigate to the project directory:
+   ```bash
+   cd Diabetic-Retinopathy-Detection-V2
+   ```
 
-## Key Features
+2. Move into the frontend directory (if applicable) and install dependencies:
+   ```bash
+   npm i
+   ```
 
-- Retinal image analysis
-- Diabetic retinopathy detection and severity classification
-- Patient monitoring
-- Health data analytics
-- Patient engagement features
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
 
-## Technologies Used
+The React frontend should now be running on `http://localhost:5173` (default Vite port).
 
-The project incorporates Python-based backend development and a mobile application frontend. Specific implementation technologies will be documented following verification.
+---
 
-## Disclaimer
+### 🧠 Backend Setup
 
-This project is for educational and research purposes only. It is not intended to replace professional medical diagnosis or clinical assessment.
+1. Open a **new terminal** in the project’s root directory.  
+
+2. Install **virtualenv** if not already installed:
+   ```bash
+   pip install virtualenv
+   ```
+
+3. Create and activate a virtual environment:
+   ```bash
+   virtualenv env
+   # Activate on Windows:
+   env\Scripts\activate
+   # Activate on macOS/Linux:
+   source env/bin/activate
+   ```
+
+4. Navigate to the backend folder:
+   ```bash
+   cd backend
+   ```
+
+5. Install all required dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+6. Run the Flask application:
+   ```bash
+   python app.py
+   ```
+
+The backend should now be running on `http://127.0.0.1:5000`.
+
+---
+
+## 🧪 Model Information
+
+- Framework: **PyTorch**
+- Input size: **64 × 64 × 3**
+- Classes: `No DR`, `Mild`, `Moderate`, `Severe`, `Blindness`
+- Training accuracy: **89%**
+- Validation accuracy: **84%**
+
+---
+
+## 🔒 Security
+
+- **PyJWT** for authentication  
+- **SHA-256** password hashing  
+- **HTTPS** (SSL/TLS) for data encryption  
+- **Role-based access control (RBAC)** for user permissions  
+
+```
+
+---
+
+## 💡 Developer Notes
+
+- Ensure both backend (`localhost:5000`) and frontend (`localhost:8081`) servers are running simultaneously.  
+- Configure `.env` files for API URLs, secret keys, and database connections e.g EXPO_PUBLIC_IP_ADDRESS = http://192.168.136.144:5000  
+
